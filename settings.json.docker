@@ -312,7 +312,7 @@
    * it to null disables Abiword and will only allow plain text and HTML
    * import/exports.
    */
-  "abiword": "${ABIWORD:null}",
+  "abiword": "/usr/bin/abiword",
 
   /*
    * This is the absolute path to the soffice executable.
@@ -320,7 +320,7 @@
    * LibreOffice can be used in lieu of Abiword to export pads.
    * Setting it to null disables LibreOffice exporting.
    */
-  "soffice": "${SOFFICE:null}",
+  "soffice": "/usr/bin/soffice",
 
   /*
    * Path to the Tidy executable.
@@ -587,5 +587,18 @@
   "loglevel": "${LOGLEVEL:INFO}",
 
   /* Override any strings found in locale directories */
-  "customLocaleStrings": {}
+  "customLocaleStrings": {},
+  
+  "ep_image_upload": {
+    "fileTypes": ["jpeg", "jpg", "bmp", "gif", "png"],
+    "maxFileSize": 10000000
+   },
+   
+   "ep_delete_after_delay": {
+    "delay": 604800, // a week, in seconds
+    "loop": true,
+    "loopDelay": 3600, // one hour, in seconds
+    "deleteAtStart": true,
+    "text": "The content of this pad has been deleted since it was older than the configured delay."
+    }
 }
